@@ -1,0 +1,1 @@
+class Application < Roda; end
