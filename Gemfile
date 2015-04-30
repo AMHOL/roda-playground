@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'roda'
+gem 'roda_action', '0.0.1'
 gem 'core', github: 'AMHOL/rom-playground'
 
 group :tools do
