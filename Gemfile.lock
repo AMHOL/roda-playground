@@ -71,9 +71,9 @@ GEM
       ffi (>= 0.5.0)
     roda (2.1.0)
       rack
-    roda-action (0.0.1)
-      roda-container (= 0.0.1)
-    roda-container (0.0.1)
+    roda-action (0.0.2)
+      roda-container (= 0.0.3)
+    roda-container (0.0.3)
     rom (0.6.0)
       equalizer (~> 0.0, >= 0.0.9)
       transproc (~> 0.1, >= 0.1.2)
@@ -116,7 +116,7 @@ DEPENDENCIES
   guard-rubocop
   rake
   roda
-  roda-action (= 0.0.1)
+  roda-action (= 0.0.2)
   rspec-core
   rspec-expectations
   rspec-mocks

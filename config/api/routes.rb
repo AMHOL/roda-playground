@@ -1,7 +1,6 @@
 module API
   Application.route do |r|
-    # This kind of thing is why lazy evaluation on resolution is key
-    Application.register(:app, self)
+    Application.register(:app, self, call: false)
 
     r.on 'users' do
       r.is do
