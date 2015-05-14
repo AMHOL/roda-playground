@@ -8,13 +8,14 @@ module API
 
   # TODO: Move to apps/web/...
   class UsersController
-    attr_accessor :relation
+    attr_accessor :app, :relation
 
-    def initialize(relation)
-      @relation = relation
+    def initialize(app, relation)
+      @app, @relation = @app, relation
     end
 
     def index
+      # can now do things like app.redirect '/'
       relation.to_a
     end
 
@@ -23,5 +24,8 @@ module API
     end
   end
 
-  Application.register(:users_controller, -> { UsersController.new(Core.relation(:users)) })
+  Application.register(:users_controller) do
+    # Broken, see https://github.com/AMHOL/roda-container/issues/2
+    UsersController.new(Application.resolve(:app), Core.relation(:users))
+  end
 end
