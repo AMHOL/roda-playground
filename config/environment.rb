@@ -5,6 +5,8 @@ Bundler.require
 # TODO: ROM multi-env
 Core.load.finalize
 
+require 'forwardable'
+
 require File.expand_path('../application', __FILE__)
 require File.expand_path('../api/application', __FILE__)
 require File.expand_path('../api/routes', __FILE__)

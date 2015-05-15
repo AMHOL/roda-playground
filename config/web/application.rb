@@ -1,5 +1,5 @@
 module Web
-  class Application < ::Roda
+  class Application < ::Application
     plugin :json
   end
 end

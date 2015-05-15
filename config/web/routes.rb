@@ -1,11 +1,7 @@
 module Web
   Application.route do |r|
-    r.on 'users' do
-      r.is do
-        r.get do
-          Core.relation(:users).to_a
-        end
-      end
+    r.root do
+      'Hello Roda!!!'
     end
   end
 end
