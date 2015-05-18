@@ -8,8 +8,10 @@ Core.load.finalize
 require 'forwardable'
 
 require File.expand_path('../application', __FILE__)
+require File.expand_path('../../apps/api', __FILE__)
 require File.expand_path('../api/application', __FILE__)
 require File.expand_path('../api/routes', __FILE__)
+require File.expand_path('../../apps/web', __FILE__)
 require File.expand_path('../web/application', __FILE__)
 require File.expand_path('../web/routes', __FILE__)
 require File.expand_path('../routes', __FILE__)
