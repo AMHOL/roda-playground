@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/AMHOL/rom-playground.git
-  revision: d92626baa7b27dc34f9636b859321d18d439a799
+  revision: bbbdac0ad556a5ad08c1abed239eaae3f2b4f92d
   specs:
     core (0.0.1)
       activesupport (~> 4.0.4)
-      rom (= 0.6.0)
+      rom (= 0.7.0)
 
 GEM
   remote: https://rubygems.org/
@@ -20,9 +20,12 @@ GEM
       parser (>= 2.2.0.pre.3, < 3.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    clap (1.0.0)
     coderay (1.1.0)
+    daemons (1.2.2)
     diff-lcs (1.2.5)
     equalizer (0.0.11)
+    eventmachine (1.0.7)
     ffi (1.9.8)
     formatador (0.2.5)
     guard (2.12.5)
@@ -69,14 +72,22 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    rerun-cj (0.10.1)
+      listen (~> 2.7, >= 2.7.9)
     roda (2.3.0)
       rack
     roda-action (0.0.3)
       roda-container (= 0.0.4)
+    roda-bin (0.1.8)
+      clap
+      rerun-cj
+      roda
+      thin
     roda-container (0.0.4)
-    rom (0.6.0)
+    roda-symbolized_params (0.0.2)
+    rom (0.7.0)
       equalizer (~> 0.0, >= 0.0.9)
-      transproc (~> 0.1, >= 0.1.2)
+      transproc (~> 0.2, >= 0.2.1)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -99,6 +110,10 @@ GEM
     ruby-progressbar (1.7.5)
     shellany (0.0.1)
     slop (3.6.0)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     thor (0.19.1)
     thread_safe (0.3.5)
     timers (4.0.1)
@@ -117,6 +132,8 @@ DEPENDENCIES
   rake
   roda
   roda-action (= 0.0.3)
+  roda-bin
+  roda-symbolized_params
   rspec-core
   rspec-expectations
   rspec-mocks

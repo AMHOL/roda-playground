@@ -3,7 +3,11 @@ module API
     plugin :json
 
     register(:users_controller) do
-      Controllers::Users.new(instance.resolve(:app), Core.relation(:users))
+      Controllers::Users.new(
+        Application.instance.resolve(:app),
+        Core.relation(:users),
+        Core.command(:users)
+      )
     end
   end
 end

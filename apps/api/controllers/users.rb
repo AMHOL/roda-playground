@@ -1,11 +1,11 @@
 module API
   module Controllers
     class Users < Base
-      attr_accessor :relation
+      attr_accessor :relation, :command_registry
 
-      def initialize(app, relation)
+      def initialize(app, relation, command_registry)
         super(app)
-        @relation = relation
+        @relation , @command_registry = relation, command_registry
       end
 
       def index
@@ -13,7 +13,16 @@ module API
       end
 
       def show(id)
-        relation.filter(:id, :eq, id.to_i).first
+        user = relation.filter(:id, :eq, id).first
+        if user.nil?
+          response.status = 404
+        else
+          user
+        end
+      end
+
+      def create
+        command_registry.create.call(params)
       end
     end
   end

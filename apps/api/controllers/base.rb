@@ -4,7 +4,7 @@ module API
       extend Forwardable
 
       attr_accessor :app
-      def_delegators :app, :request, :response
+      def_delegators :app, :params, :request, :response
 
       def initialize(app)
         @app = app

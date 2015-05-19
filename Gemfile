@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'roda'
+gem 'roda-bin'
 gem 'roda-action', '0.0.3'
+gem 'roda-symbolized_params'
 gem 'core', github: 'AMHOL/rom-playground'
 
 group :tools do
