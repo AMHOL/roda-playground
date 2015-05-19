@@ -1,6 +1,6 @@
 module API
   Application.route do |r|
-    register(:app, self, call: false)
+    instance.register(:app, self, call: false)
 
     r.on 'users' do
       r.is do
