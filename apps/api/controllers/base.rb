@@ -5,6 +5,7 @@ module API
 
       attr_accessor :app
       def_delegators :app, :params, :request, :response
+      def_delegators API::Application, :resolve
 
       def initialize(app)
         @app = app

@@ -76,14 +76,14 @@ GEM
       listen (~> 2.7, >= 2.7.9)
     roda (2.3.0)
       rack
-    roda-action (0.0.3)
-      roda-container (= 0.0.4)
+    roda-action (0.1.0)
+      roda-container (= 0.1.0)
     roda-bin (0.1.8)
       clap
       rerun-cj
       roda
       thin
-    roda-container (0.0.4)
+    roda-container (0.1.0)
     roda-symbolized_params (0.0.2)
     rom (0.7.0)
       equalizer (~> 0.0, >= 0.0.9)
@@ -131,7 +131,7 @@ DEPENDENCIES
   guard-rubocop
   rake
   roda
-  roda-action (= 0.0.3)
+  roda-action (= 0.1.0)
   roda-bin
   roda-symbolized_params
   rspec-core
